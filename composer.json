@@ -1,0 +1,55 @@
+{
+    "name": "avengers-code-lovers/laravel-log-monitoring",
+    "description": "Laravel log monitoring with log Laravel and log queue from avengers code lovers",
+    "keywords": [
+        "laravel",
+        "chatwork",
+        "monitoring",
+        "queue"
+      ],
+    "authors": [
+        {
+            "name": "AvengersCodeLovers",
+            "email": "nguyen.huu.su@sun-asterisk.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "wataridori/chatwork-sdk": "^0.3.1",
+        "illuminate/http": "~5.7.0|~5.8.0|^6.0|^7.0",
+        "illuminate/support": "~5.7.0|~5.8.0|^6.0|^7.0"
+    },
+    "require-dev": {
+        "illuminate/contracts": "~5.7.0|~5.8.0|^6.0|^7.0",
+        "phpunit/phpunit": "^4.8",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+          "AvengersGroup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "files": [
+          "tests/TestFunctions.php"
+        ],
+        "psr-4": {
+          "AvengersGroup\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+          "dev-master": "master"
+        },
+        "laravel": {
+          "providers": [
+              "AvengersGroup\\MonitoringServiceProvider"
+          ]
+        }
+      },
+      "archive" : {
+        "exclude": [
+          "/tests"
+        ]
+    }
+}
