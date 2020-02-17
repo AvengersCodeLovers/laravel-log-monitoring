@@ -25,6 +25,6 @@ class MonitoringServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->commands($this->services);
+        $this->app->singleton(AbstractHandler::class);
     }
 }

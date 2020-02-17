@@ -38,9 +38,6 @@
         }
     },
     "extra": {
-        "branch-alias": {
-          "dev-master": "master"
-        },
         "laravel": {
           "providers": [
               "AvengersGroup\\MonitoringServiceProvider"
