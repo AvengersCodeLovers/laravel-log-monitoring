@@ -1,0 +1,51 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "69ec1927e5006fd3c266949aff0f5474",
+    "packages": [
+        {
+            "name": "wataridori/chatwork-sdk",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wataridori/chatwork-sdk.git",
+                "reference": "f0817ef9fe6b657849ba972e1e701dde1a1aa537"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wataridori/chatwork-sdk/zipball/f0817ef9fe6b657849ba972e1e701dde1a1aa537",
+                "reference": "f0817ef9fe6b657849ba972e1e701dde1a1aa537",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "wataridori\\ChatworkSDK\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Tran Duc Thang",
+                    "email": "thangtd90@gmail.com"
+                }
+            ],
+            "description": "Just a non-official SDK for Chatwork",
+            "time": "2019-07-29T03:24:59+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

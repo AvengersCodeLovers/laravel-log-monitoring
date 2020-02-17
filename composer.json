@@ -31,7 +31,7 @@
     },
     "autoload-dev": {
         "files": [
-          "tests/TestFunctions.php"
+          "tests/MonitoringLaravelTest.php"
         ],
         "psr-4": {
           "AvengersGroup\\Test\\": "tests"
