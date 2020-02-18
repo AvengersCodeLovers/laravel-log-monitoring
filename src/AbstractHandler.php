@@ -10,29 +10,16 @@ use Illuminate\Validation\ValidationException;
 use wataridori\ChatworkSDK\Exception\RequestFailException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
-class AbstractHandler extends ExceptionHandler
+class AbstractHandler
 {
     /**
-     * Report or log an exception.
-     *
-     * @param  \Exception  $exception
-     * @return void
-     */
-    public function report(Exception $exception)
-    {
-        $this->sendExceptionToChatWork($exception);
-
-        parent::report($exception);
-    }
-
-        /**
      * Send Exception To ChatWork
      *
      * @param \Exception $exception
      *
      * @return mixed
      */
-    protected function sendExceptionToChatWork($exception)
+    public function sendExceptionToChatWork($exception)
     {
         try {
             // If have more case should use switch case

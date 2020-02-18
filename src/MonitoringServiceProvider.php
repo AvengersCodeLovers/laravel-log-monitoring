@@ -14,9 +14,12 @@ class MonitoringServiceProvider extends ServiceProvider
      */
     protected $defer = true;
 
-    protected $services = [
-        AbstractHandler::class,
-    ];
+    /**
+     * Abstract type to bind Monitoring Log Chatwork as in the Service Container.
+     *
+     * @var string
+     */
+    public static $abstract = 'monitoring';
 
     /**
      * Register the service provider.
@@ -25,6 +28,18 @@ class MonitoringServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(AbstractHandler::class);
+        $this->app->singleton(static::$abstract, function ($app) {
+            return new AbstractHandler($app);
+        });
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [static::$abstract];
     }
 }
