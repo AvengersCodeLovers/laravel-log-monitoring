@@ -40,7 +40,7 @@ class AbstractHandler
 
             return $room->sendMessageToList($admins, $message);
         } catch (RequestFailException $ex) {
-            throw $ex->getMessage();
+            throw $ex;
         }
     }
 
