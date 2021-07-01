@@ -64,25 +64,25 @@ class AbstractHandler
      */
     protected function getTemplateMessage($e, $r)
     {
-        $uid = Auth::check() ? Auth::user()->id : 'N/A';
+        $email = Auth::check() ? Auth::user()->email : 'N/A';
         $message = $e->getMessage() ? $e->getMessage() : 'N/A';
 
         if ($r) {
-            return '[info][title]Bug in ' . env('APP_ENV') . '[/title][code]Message: ' . $message . '
+            return '[info][title]Bug in ' . config('app.env') . '[/title][code]Message: ' . $message . '
             In file: ' . $e->getFile() . '
             Line: ' . $e->getLine() . '
             Request uri: ' . $r->getRequestUri() . '
             Method: ' . $r->getMethod() . '
             Previous uri: ' . str_replace(url('/'), '', url()->previous()) . '
             User agent: ' . $r->header('User-Agent') . '
-            User id: ' . $uid
+            User id: ' . $email
             . ' [/code][/info]';
         }
 
-        return '[info][title]Bug in ' . env('APP_ENV') . '[/title][code]Message: ' . $message . '
+        return '[info][title]Bug in ' . config('app.env') . '[/title][code]Message: ' . $message . '
         In file: ' . $e->getFile() . '
         Line: ' . $e->getLine() . '
-        User id: ' . $uid
+        Email: ' . $email
         . ' [/code][/info]';
     }
 }
